@@ -18,7 +18,9 @@ end
 def get_japanese_emoticon(file_path, emoji)
   library = load_library(file_path)
   library.each do |key, value|
-    library[key][emoji]
+    if library[key][emoji].nil?
+      
+    end
   end
   
 end
