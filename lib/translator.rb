@@ -16,8 +16,9 @@ def load_library(file_path)
 end
 
 def get_japanese_emoticon(file_path, emoji)
-  load_library(file_path).each do |key, value|
-    
+  library = load_library(file_path)
+  library.each do |key, value|
+    library[key][emoji]
   end
   
 end
