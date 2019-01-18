@@ -17,20 +17,17 @@ end
 
 def get_japanese_emoticon(file_path, emoji)
   library = load_library(file_path)
-  library.each do |key, value|
-    if library[key][emoji]
-      return library[key][emoji]
-    end
+  library = load_library(file_path)
+  if library["get_emoticon"][emoji]
+    return library[key][emoji]
   end
   return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(file_path, emoji)
   library = load_library(file_path)
-  library.each do |key, value|
-    if library[key][emoji]
-      return library[key][emoji]
-    end
+  if library["get_emoticon"][emoji]
+    return library[key][emoji]
   end
   return "Sorry, that emoticon was not found"
 end
