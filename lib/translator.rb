@@ -22,6 +22,7 @@ def get_japanese_emoticon(file_path, emoji)
       return library[key][emoji]
     end
   end
+  return "Sorry emoticon not found."
 end
 
 def get_english_meaning
